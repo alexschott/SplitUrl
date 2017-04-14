@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon_128.png",
+      "default_title": "Campaign"
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css" ],
+      "js": [ "jquery.js", "content.js" ],
+      "matches": [ "*://*.linkedin.com/*" ]
+   } ],
+   "description": "Campaign",
+   "icons": {
+      "128": "images/icon_128.png"
+   },
+   "manifest_version": 2,
+   "name": "Campaign",
+   "options_page": "login.html",
+   "permissions": [ "activeTab", "tabs", "*://*.linkedin.com/*", "storage", "management", "identity", "cookies", "alarms" ],
+   "version": "0.1"
+}
